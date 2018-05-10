@@ -15,3 +15,12 @@ export JFCAMERON_GITSYNC_PATH_TO_WORKSPACE=~/Workspace
 
 export JFCAMERON_GITACCOUNTSWITCHER_WORK_EMAIL=joseph.cameron@youi.tv
 export JFCAMERON_GITACCOUNTSWITCHER_PERSONAL_EMAIL=jf.cameron@gmail.com
+
+# =====================
+# Thirdparty submodules
+# =====================
+JFC_THIRDPARTY_DIR="$( cd "${BASH_SOURCE%/*}";cd ../thirdparty; pwd -P )"
+
+source "${JFC_THIRDPARTY_DIR}/git/contrib/completion/git-completion.bash"
+
+alias gitsync="${JFC_THIRDPARTY_DIR}/gitsync/gitsync.sh"

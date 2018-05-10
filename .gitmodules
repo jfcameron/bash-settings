@@ -1,0 +1,9 @@
+[submodule "thirdparty/cdf"]
+	path = thirdparty/cdf
+	url = https://github.com/jfcameron/cdf.git
+[submodule "thirdparty/git"]
+	path = thirdparty/git
+	url = https://github.com/git/git.git
+[submodule "thirdparty/gitsync"]
+	path = thirdparty/gitsync
+	url = https://github.com/jfcameron/gitsync.git
