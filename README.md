@@ -15,4 +15,3 @@ source ~/path/to/bash-settings/src/macos-config.bash
 
 ## Repository Layout
 src contains my config files and are all that needs to be loaded locally to use my settings. thirdparty contains submodule git repos of various bash projects. These are the dependencies of my settings and provide progarm specific tab completion etc.
-
