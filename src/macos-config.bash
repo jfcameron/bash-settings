@@ -15,10 +15,6 @@ fi
 # =====================
 # Thirdparty submodules
 # =====================
-JFC_THIRDPARTY_DIR="$( cd "${BASH_SOURCE%/*}";cd ../thirdparty; pwd -P )"
+JFC_THIRDPARTY_DIR="${BASH_SOURCE%/*}/../thirdparty"
 
-#CDF not working
-#alias cdf=.\ "${JFC_THIRDPARTY_DIR}/cdf/cdf.sh"
-#alias cdf=". /Users/josephcameron/Workspace/bash-settings/thirdparty/cdf/cdf.sh"
-#echo /Users/josephcameron/Workspace/bash-settings/thirdparty/cdf/cdf.sh
-#echo ${JFC_THIRDPARTY_DIR}/cdf/cdf.sh
+alias cdf=". ${JFC_THIRDPARTY_DIR}/cdf/cdf.sh"
