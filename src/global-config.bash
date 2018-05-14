@@ -3,6 +3,8 @@
 
 export PS1='\w$' #prepend cursor with cwd
 
+alias emacs="emacs -nw" # run emacs in terminal mode
+
 # ===============================
 # Personal utility configurations
 # ===============================
