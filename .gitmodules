@@ -7,3 +7,6 @@
 [submodule "thirdparty/gitsync"]
 	path = thirdparty/gitsync
 	url = https://github.com/jfcameron/gitsync.git
+[submodule "thirdparty/winpath"]
+	path = thirdparty/winpath
+	url = https://github.com/jfcameron/winpath.git
