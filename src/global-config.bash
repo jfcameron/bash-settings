@@ -3,9 +3,13 @@
 
 export PS1='\w$' #prepend cursor with cwd
 
+set -o vi # enables vi mode for interactive bash
+
 alias emacs="emacs -nw" # run emacs in terminal mode
 
 alias less="less -R" # casues raw control characters to be displayed; allows color in less output
+
+alias diff="colordiff" # replaces calls to diff with calls to colordiff
 
 # ===============================
 # Personal utility configurations
