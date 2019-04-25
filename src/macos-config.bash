@@ -3,6 +3,9 @@
 
 alias ls="ls -G" # Colorize ls output
 
+# tell ls not to strip color from output when not outputting to terminal (e.g piping to less)
+export CLICOLOR_FORCE=1
+
 # ===========================
 # iTerm: set tab names to CWD
 # ===========================
