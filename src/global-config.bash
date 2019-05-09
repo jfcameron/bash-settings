@@ -3,6 +3,8 @@
 
 export PS1='\w$' #prepend cursor with cwd
 
+export EDITOR="vi"
+
 set -o vi # enables vi mode for interactive bash
 
 alias emacs="emacs -nw" # run emacs in terminal mode
