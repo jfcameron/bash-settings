@@ -2,6 +2,8 @@
 
 export PS1='\w$' #prepend cursor with cwd
 
+export EDITOR="vi"
+
 set -o vi # enables vi mode for interactive bash
 
 alias diff="colordiff"  # replaces calls to diff with calls to colordiff

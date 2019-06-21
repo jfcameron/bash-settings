@@ -1,6 +1,5 @@
-# Bash-Settings
-Personal preferences for interactive bash. 
-Put in repo for convenience.
+# Dot-Files
+Personal config files for programs running in unix-like environments
 
 ## Usage
 initialize git submodules then source src/*.bash files from the local bash config file.
@@ -9,9 +8,9 @@ OS specific settings are handled in <OS_NAME>-config.bash files.
 
 MacOS example:
 ```bash
-source ~/path/to/bash-settings/src/global-config.bash
-source ~/path/to/bash-settings/src/macos-config.bash
+source ~/path/to/this/src/global-config.bash
+source ~/path/to/this/src/macos-config.bash
 ```
 
 ## Repository Layout
-src contains my config files and are all that needs to be loaded locally to use my settings. thirdparty contains submodule git repos of various bash projects. These are the dependencies of my settings and provide progarm specific tab completion etc.
+src contains my config files for various programs run under a unix-like environment. thirdparty contains submodules to git repos of external projects my configs depend on.  e.g: git tab completion.

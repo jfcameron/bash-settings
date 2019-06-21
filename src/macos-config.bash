@@ -2,7 +2,12 @@
 
 alias ls="ls -G" # Colorize ls output
 
-# iTerm2: set tab names to the current working directory 
+# tell ls not to strip color from output when not outputting to terminal (e.g piping to less)
+export CLICOLOR_FORCE=1
+
+# ===========================
+# iTerm: set tab names to CWD
+# ===========================
 if [[ "$(ps -p $(ps -o 'ppid=' -p $$))" = *"iTerm2"* ]]; then
   echo -ne "\033]0;"$(pwd)"\007"
   function jfc_iterm_update_tab_name_on_cd(){ cd "${@}" && echo -ne "\033]0;"$(pwd)"\007"; }
