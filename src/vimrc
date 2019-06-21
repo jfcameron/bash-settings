@@ -1,6 +1,10 @@
+" Vim preferences
+" to use create a sym link to this file from the home directory named .vimrc
+
 set autoindent
 set expandtab
 set number
 set shiftwidth=4
 set softtabstop=4
 syntax on
+
