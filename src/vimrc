@@ -1,10 +1,19 @@
 " Vim preferences
 " to use create a sym link to this file from the home directory named .vimrc
 
+" General Settings
 set autoindent
 set expandtab
+set nocompatible
 set number
 set shiftwidth=4
 set softtabstop=4
-syntax on
+
+syntax enable
+
+" Wild menu settings
+set wildignorecase
+set wildmenu
+set wildmode=list:full
+set wildignore=.git,CMakeFiles
 
