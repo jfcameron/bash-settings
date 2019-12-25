@@ -6,6 +6,8 @@ export EDITOR="vi"
 
 set -o vi # enables vi mode for interactive bash
 
+unset TMUX # allow nested tmux sessions
+
 alias diff="colordiff"  # replaces calls to diff with calls to colordiff
 alias emacs="emacs -nw" # run emacs in terminal mode
 alias less="less -R"    # causes raw control characters to be displayed by default
