@@ -2,28 +2,20 @@
 
 export PS1='\w$' #prepend cursor with cwd
 
-export EDITOR="vi"
+export EDITOR="vim"
 
 set -o vi # enables vi mode for interactive bash
 
 unset TMUX # allow nested tmux sessions
 
 alias diff="colordiff"  # replaces calls to diff with calls to colordiff
-alias emacs="emacs -nw" # run emacs in terminal mode
 alias less="less -R"    # causes raw control characters to be displayed by default
 
 # ===============================
 # Personal utility configurations
 # ===============================
-export JFCAMERON_STAGEMAN_GITHUB_USER="jfcameron"
-export JFCAMERON_STAGEMAN_PATH_TO_STAGING_DIRECTORY=~/Dropbox/Staging
-export JFCAMERON_STAGEMAN_PATH_TO_WORKSPACE=~/Workspace 
-
 export JFCAMERON_GITSYNC_PATH_TO_WORKSPACE=~/Workspace
 export JFCAMERON_GITSYNC_USER="jfcameron"
-
-export JFCAMERON_GITACCOUNTSWITCHER_PERSONAL_EMAIL=jf.cameron@gmail.com
-export JFCAMERON_GITACCOUNTSWITCHER_WORK_EMAIL=joseph.cameron@youi.tv
 
 # =====================
 # Thirdparty submodules
