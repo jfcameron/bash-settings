@@ -17,3 +17,7 @@ set wildmenu
 set wildmode=list:full
 set wildignore=.git,CMakeFiles
 
+" Copy to system buffer without recompiling vim with x option. 
+" Requires xclip and xsel. CONTROL + C
+vnoremap <C-C> :w !xclip -i -sel c<CR><CR>
+
