@@ -17,7 +17,25 @@ set wildmenu
 set wildmode=list:full
 set wildignore=.git,CMakeFiles
 
-" Copy to system buffer without recompiling vim with x option. 
-" Requires xclip and xsel. CONTROL + C
+" Copy to/paste from system buffer without recompiling vim with x option. Requires xclip. CONTROL + C
 vnoremap <C-C> :w !xclip -i -sel c<CR><CR>
+vnoremap <C-V> :read !xclip -o<CR>
+
+" buffer navigation
+noremap gb :b#<CR>
+noremap gn :bn<CR>
+
+" move to next then delete last buffer
+noremap gd :bn<CR>:bd #<CR>
+
+" opens all files with a postfix recursively in given directory.
+command! -nargs=+ -complete=file -bar NewRecursiveFiles :n <args>/*.* <args>/**/*.*|cw
+nnoremap <f2> :NewRecursiveFiles<space>
+
+" move current tab to first tab
+noremap gm :tabmove 0<CR>
+noremap <f4> :tabnew<CR>
+
+" list all buffers
+nnoremap <f3> :ls<CR>
 
