@@ -1,7 +1,9 @@
 " Vim preferences
 " to use create a sym link to this file from the home directory named .vimrc
 
-" General Settings
+"
+" General config
+"
 set autoindent
 set expandtab
 set nocompatible
@@ -9,33 +11,59 @@ set number
 set shiftwidth=4
 set softtabstop=4
 
-syntax enable
-
 " Wild menu settings
 set wildignorecase
 set wildmenu
 set wildmode=list:full
 set wildignore=.git,CMakeFiles
 
-" Copy to/paste from system buffer without recompiling vim with x option. Requires xclip. CONTROL + C
+syntax enable
+
+"
+" Copy paste clipboard without recompilation (X only)
+" *does not always work properly. may remove and go back to recompiling vim
+" with clipboard register aliases
+"
 vnoremap <C-C> :w !xclip -i -sel c<CR><CR>
 vnoremap <C-V> :read !xclip -o<CR>
 
-" buffer navigation
+"
+" buffer manipulation
+"
+" navigation
 noremap gb :b#<CR>
 noremap gn :bn<CR>
+noremap gN :bp<CR>
 
-" move to next then delete last buffer
+" move to next then delete last buffer 
+" *prevents current window/tab from closing
 noremap gd :bn<CR>:bd #<CR>
+
+"
+" tab manipulation
+"
+" move current tab to first tab (qutebrowser hotkey)
+noremap gm :tabmove 0<CR>
+
+"
+" Function keys: common commands
+"
+" 1 button alternative to shift + :
+nnoremap <f1> :
 
 " opens all files with a postfix recursively in given directory.
 command! -nargs=+ -complete=file -bar NewRecursiveFiles :n <args>/*.* <args>/**/*.*|cw
 nnoremap <f2> :NewRecursiveFiles<space>
 
-" move current tab to first tab
-noremap gm :tabmove 0<CR>
-noremap <f4> :tabnew<CR>
+" All buffer search + navigation
+" search in all buffers, populate c list
+command! -bang -nargs=+ GrepAllBuffers execute 'vimgrep"<bang><args>" ' . join(map(filter(range(1, bufnr('$')), 'buflisted(v:val)'), '"#".v:val'), ' ')
+nnoremap <f3> :GrepAllBuffers<space>
+" navigate c list
+map <C-N> :cnext<CR>
+map <C-P> :cprevious<CR>
 
-" list all buffers
-nnoremap <f3> :ls<CR>
+" find and replace in all open buffers: a/b
+command -nargs=* ReplaceInAllBuffers :bufdo %s/<args>/ge | update
+noremap <f4> :ReplaceInAllBuffers<space>
 
