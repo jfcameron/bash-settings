@@ -67,3 +67,6 @@ map <C-P> :cprevious<CR>
 command -nargs=* ReplaceInAllBuffers :bufdo %s/<args>/ge | update
 noremap <f4> :ReplaceInAllBuffers<space>
 
+" run external command, write data to reg
+command -nargs=* RunToReg :let @" = system("<args>")
+noremap <f5> :RunToReg<space>
